@@ -15,6 +15,6 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, decrement } = counterSlice.actions;
-export const selectCount = (state) => state.counter.value;
-export default counterSlice.reducer;
+export const { increment, decrement } = counterSlice.actions; //connecting with actions
+export const selectCount = (state) => state.counter.value; // showing the value
+export default counterSlice.reducer; // for store
