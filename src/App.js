@@ -1,23 +1,26 @@
 import React from "react";
-import { useState } from "react";
+
+import { useSelector } from "react-redux";
+import { selectCount } from "./features/counter/CounterSlice";
 import "./App.css";
+
 const App = () => {
-  let [counter, updateCounter] = useState(0);
+  const counter = useSelector(selectCount)
 
   const addFiveHandler = () => {
-    updateCounter(counter + 5);
+    
   };
   const addOneHandler = () => {
-    updateCounter(counter + 1);
+    
   };
   const resetHandler = () => {
-    updateCounter((counter = 0));
+    
   };
   const removeFiveHandler = () => {
-    updateCounter(counter - 5);
+    
   };
   const removeOneHandler = () => {
-    updateCounter(counter - 1);
+  
   };
 
   return (
